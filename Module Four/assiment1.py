@@ -14,13 +14,17 @@
 # if the file does not exits:
 # Error: The file 'sample.txt' was not found.
 
-with open ("sample.txt", "w") as file:
-    file.write("Line 1: This is a sample text file.\n")
-    file.write("Line 2: It contains multiple lines.")
-try:
-    with open("sample.txt1", "r") as file:
-        print("Reading file content:")
-        for line in file:
-            print(line.strip())
-except FileNotFoundError:
-    print("The file 'sample.txt' was not found.")
+def a_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            print("Reading file content:")
+            for i, line in enumerate(file, start=1):
+                print(f"{line.strip()}")
+    except FileNotFoundError:
+        print(f"Error: The file {filename} was not found.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+# Call the function
+a_file("sample.txt")
