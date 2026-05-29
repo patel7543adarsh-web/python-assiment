@@ -1,14 +1,4 @@
 import tkinter as tk
-# 1. Define all the operator with function
-def add(a, b): 
-    return a + b
-
-def subtract(a, b): 
-    return a - b
-
-def multiply(a, b): 
-    return a * b
-
 def divide(a, b): 
     if b == 0:
         return "Error (Div by 0)"
@@ -97,3 +87,12 @@ for (text, row, col) in buttons:
     btn.grid(row=row, column=col, padx=5, pady=5)
 
 root.mainloop()
+# 1. Define all the operator with function
+def add(a, b): 
+    return a + b
+
+def subtract(a, b): 
+    return a - b
+
+def multiply(a, b): 
+    return a * b
